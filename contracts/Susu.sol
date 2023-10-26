@@ -89,7 +89,7 @@ contract SusuContract {
         }
 
         // Reset next distribution date
-        nextDistributionDate = block.timestamp + 90 days;
+        nextDistributionDate = block.timestamp + 30 days;
         
         // Emit disbursement event
         emit Disbursed(poolAmount);
@@ -141,8 +141,4 @@ contract SusuContract {
         address currentUser = msg.sender;
         return balances[currentUser];
     }
-
-    
-
-    // Additional functions (e.g., rotation mechanism and dismissal logic) can be added based on your requirements.
 }
